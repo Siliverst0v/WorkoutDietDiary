@@ -12,6 +12,7 @@ struct WorkoutDietDiaryApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(RealmManager())
         }
     }
 }

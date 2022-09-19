@@ -7,13 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45E51DB28D8CEB700256F4B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DA28D8CEB700256F4B /* RealmManager.swift */; };
+		A45E51DE28D8CEF700256F4B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DD28D8CEF700256F4B /* Workout.swift */; };
+		A45E51E028D8CF1200256F4B /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DF28D8CF1200256F4B /* Exercises.swift */; };
+		A45E51E228D8CF3400256F4B /* ExerciseGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51E128D8CF3400256F4B /* ExerciseGroup.swift */; };
+		A45E51E428D8CF4B00256F4B /* SelfExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51E328D8CF4B00256F4B /* SelfExercises.swift */; };
+		A45E51E828D8CF8A00256F4B /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51E728D8CF8A00256F4B /* CustomButtonStyles.swift */; };
+		A45E51EC28D8CFD800256F4B /* ExerciseButtonsBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51EB28D8CFD800256F4B /* ExerciseButtonsBackgroundView.swift */; };
+		A45E51F028D8D27300256F4B /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51EF28D8D27300256F4B /* WorkoutsView.swift */; };
+		A45E51F228D8D2A700256F4B /* WorkoutBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51F128D8D2A700256F4B /* WorkoutBodyView.swift */; };
+		A45E51F428D8D2F100256F4B /* DetailWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51F328D8D2F100256F4B /* DetailWorkoutView.swift */; };
+		A45E51F628D8D36200256F4B /* DeleteWorkoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51F528D8D36200256F4B /* DeleteWorkoutButton.swift */; };
+		A45E51F928D8D3B400256F4B /* ChoosenExerciseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51F828D8D3B400256F4B /* ChoosenExerciseButtonView.swift */; };
+		A45E51FB28D8D3DE00256F4B /* ChoosenSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51FA28D8D3DE00256F4B /* ChoosenSetsView.swift */; };
+		A45E51FD28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51FC28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift */; };
+		A45E520028D8D45100256F4B /* PreviousExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51FF28D8D45100256F4B /* PreviousExercisesView.swift */; };
+		A45E520228D8D46B00256F4B /* PreviousExercisesButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520128D8D46B00256F4B /* PreviousExercisesButtonView.swift */; };
+		A45E520528D8F92D00256F4B /* ChooseExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520428D8F92D00256F4B /* ChooseExercisesView.swift */; };
+		A45E520728D8F96100256F4B /* ExerciseGroupButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520628D8F96100256F4B /* ExerciseGroupButtonView.swift */; };
+		A45E520928D8F99F00256F4B /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520828D8F99F00256F4B /* BodyView.swift */; };
+		A45E520C28D90BDB00256F4B /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520B28D90BDB00256F4B /* ExercisesView.swift */; };
+		A45E520F28D90C1E00256F4B /* ExerciseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E520E28D90C1E00256F4B /* ExerciseButtonView.swift */; };
+		A45E521128D90C2F00256F4B /* NotPressedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521028D90C2F00256F4B /* NotPressedButtonView.swift */; };
+		A45E521328D90C4500256F4B /* PressedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521228D90C4500256F4B /* PressedButtonView.swift */; };
+		A45E521528D90C5B00256F4B /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521428D90C5B00256F4B /* SetsView.swift */; };
+		A45E521828D90C8F00256F4B /* AddSelfExerciseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521728D90C8F00256F4B /* AddSelfExerciseButton.swift */; };
+		A45E521A28D90CAE00256F4B /* SelfExerciseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521928D90CAE00256F4B /* SelfExerciseButton.swift */; };
+		A45E521C28D90CCA00256F4B /* NotPressedSelfExerciseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521B28D90CCA00256F4B /* NotPressedSelfExerciseButton.swift */; };
+		A45E521E28D90CE700256F4B /* PressedSelfExerciseButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521D28D90CE700256F4B /* PressedSelfExerciseButtton.swift */; };
+		A45E522028D90D0700256F4B /* PressedSelfExerciseButtonSetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E521F28D90D0700256F4B /* PressedSelfExerciseButtonSetsView.swift */; };
+		A45E522528D90DBF00256F4B /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522428D90DBF00256F4B /* TimeFormatter.swift */; };
+		A45E522728D90DF700256F4B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522628D90DF700256F4B /* Day.swift */; };
+		A45E522928D90E1D00256F4B /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522828D90E1D00256F4B /* AddFoodView.swift */; };
+		A45E522B28D90E3C00256F4B /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522A28D90E3C00256F4B /* EditFoodView.swift */; };
+		A45E522D28D90E6300256F4B /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522C28D90E6300256F4B /* CaloriesView.swift */; };
+		A45E522F28D90E7E00256F4B /* DietDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522E28D90E7E00256F4B /* DietDiaryView.swift */; };
 		A4E0656328D8CC7100212950 /* WorkoutDietDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0656228D8CC7100212950 /* WorkoutDietDiaryApp.swift */; };
 		A4E0656528D8CC7100212950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0656428D8CC7100212950 /* ContentView.swift */; };
 		A4E0656728D8CC7200212950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E0656628D8CC7200212950 /* Assets.xcassets */; };
 		A4E0656A28D8CC7200212950 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E0656928D8CC7200212950 /* Preview Assets.xcassets */; };
+		D5DAFD0DDFEA80BA09CA9D21 /* Pods_WorkoutDietDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937F998887A0030DEBF242C /* Pods_WorkoutDietDiary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0937F998887A0030DEBF242C /* Pods_WorkoutDietDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutDietDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		557B8E99BE2761D8F6628C51 /* Pods-WorkoutDietDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutDietDiary.release.xcconfig"; path = "Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary.release.xcconfig"; sourceTree = "<group>"; };
+		93BE86D74B1425BF3A4AF423 /* Pods-WorkoutDietDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutDietDiary.debug.xcconfig"; path = "Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		A45E51DA28D8CEB700256F4B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		A45E51DD28D8CEF700256F4B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		A45E51DF28D8CF1200256F4B /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		A45E51E128D8CF3400256F4B /* ExerciseGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGroup.swift; sourceTree = "<group>"; };
+		A45E51E328D8CF4B00256F4B /* SelfExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfExercises.swift; sourceTree = "<group>"; };
+		A45E51E728D8CF8A00256F4B /* CustomButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyles.swift; sourceTree = "<group>"; };
+		A45E51EB28D8CFD800256F4B /* ExerciseButtonsBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseButtonsBackgroundView.swift; sourceTree = "<group>"; };
+		A45E51EF28D8D27300256F4B /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		A45E51F128D8D2A700256F4B /* WorkoutBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutBodyView.swift; sourceTree = "<group>"; };
+		A45E51F328D8D2F100256F4B /* DetailWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkoutView.swift; sourceTree = "<group>"; };
+		A45E51F528D8D36200256F4B /* DeleteWorkoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteWorkoutButton.swift; sourceTree = "<group>"; };
+		A45E51F828D8D3B400256F4B /* ChoosenExerciseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenExerciseButtonView.swift; sourceTree = "<group>"; };
+		A45E51FA28D8D3DE00256F4B /* ChoosenSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenSetsView.swift; sourceTree = "<group>"; };
+		A45E51FC28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotPressedChoosenExerciseButtonView.swift; sourceTree = "<group>"; };
+		A45E51FF28D8D45100256F4B /* PreviousExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousExercisesView.swift; sourceTree = "<group>"; };
+		A45E520128D8D46B00256F4B /* PreviousExercisesButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousExercisesButtonView.swift; sourceTree = "<group>"; };
+		A45E520428D8F92D00256F4B /* ChooseExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseExercisesView.swift; sourceTree = "<group>"; };
+		A45E520628D8F96100256F4B /* ExerciseGroupButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGroupButtonView.swift; sourceTree = "<group>"; };
+		A45E520828D8F99F00256F4B /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
+		A45E520B28D90BDB00256F4B /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		A45E520E28D90C1E00256F4B /* ExerciseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseButtonView.swift; sourceTree = "<group>"; };
+		A45E521028D90C2F00256F4B /* NotPressedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotPressedButtonView.swift; sourceTree = "<group>"; };
+		A45E521228D90C4500256F4B /* PressedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressedButtonView.swift; sourceTree = "<group>"; };
+		A45E521428D90C5B00256F4B /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
+		A45E521728D90C8F00256F4B /* AddSelfExerciseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSelfExerciseButton.swift; sourceTree = "<group>"; };
+		A45E521928D90CAE00256F4B /* SelfExerciseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfExerciseButton.swift; sourceTree = "<group>"; };
+		A45E521B28D90CCA00256F4B /* NotPressedSelfExerciseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotPressedSelfExerciseButton.swift; sourceTree = "<group>"; };
+		A45E521D28D90CE700256F4B /* PressedSelfExerciseButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressedSelfExerciseButtton.swift; sourceTree = "<group>"; };
+		A45E521F28D90D0700256F4B /* PressedSelfExerciseButtonSetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressedSelfExerciseButtonSetsView.swift; sourceTree = "<group>"; };
+		A45E522428D90DBF00256F4B /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		A45E522628D90DF700256F4B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		A45E522828D90E1D00256F4B /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		A45E522A28D90E3C00256F4B /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
+		A45E522C28D90E6300256F4B /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
+		A45E522E28D90E7E00256F4B /* DietDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietDiaryView.swift; sourceTree = "<group>"; };
 		A4E0655F28D8CC7100212950 /* WorkoutDietDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDietDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E0656228D8CC7100212950 /* WorkoutDietDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDietDiaryApp.swift; sourceTree = "<group>"; };
 		A4E0656428D8CC7100212950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +100,165 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DAFD0DDFEA80BA09CA9D21 /* Pods_WorkoutDietDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7902E3F6BB9FE302E229DF3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93BE86D74B1425BF3A4AF423 /* Pods-WorkoutDietDiary.debug.xcconfig */,
+				557B8E99BE2761D8F6628C51 /* Pods-WorkoutDietDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A45E51DC28D8CEE500256F4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51DF28D8CF1200256F4B /* Exercises.swift */,
+				A45E51DD28D8CEF700256F4B /* Workout.swift */,
+				A45E51E128D8CF3400256F4B /* ExerciseGroup.swift */,
+				A45E51E328D8CF4B00256F4B /* SelfExercises.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A45E51E628D8CF7500256F4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51E728D8CF8A00256F4B /* CustomButtonStyles.swift */,
+				A45E51EB28D8CFD800256F4B /* ExerciseButtonsBackgroundView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A45E51ED28D8D24500256F4B /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51EE28D8D24E00256F4B /* WorkoutView+SubViews */,
+				A45E520328D8F90900256F4B /* ChooseExercisesView+SubViews */,
+				A45E520A28D90BCC00256F4B /* ExercisesView+SubViews */,
+				A45E51DC28D8CEE500256F4B /* Models */,
+				A45E51E628D8CF7500256F4B /* Helpers */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		A45E51EE28D8D24E00256F4B /* WorkoutView+SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51F528D8D36200256F4B /* DeleteWorkoutButton.swift */,
+				A45E51EF28D8D27300256F4B /* WorkoutsView.swift */,
+				A45E51F128D8D2A700256F4B /* WorkoutBodyView.swift */,
+				A45E51F328D8D2F100256F4B /* DetailWorkoutView.swift */,
+				A45E51F728D8D37C00256F4B /* ChoosenExerciseButton */,
+				A45E51FE28D8D44200256F4B /* PreviousExercisesView */,
+			);
+			path = "WorkoutView+SubViews";
+			sourceTree = "<group>";
+		};
+		A45E51F728D8D37C00256F4B /* ChoosenExerciseButton */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51F828D8D3B400256F4B /* ChoosenExerciseButtonView.swift */,
+				A45E51FA28D8D3DE00256F4B /* ChoosenSetsView.swift */,
+				A45E51FC28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift */,
+			);
+			path = ChoosenExerciseButton;
+			sourceTree = "<group>";
+		};
+		A45E51FE28D8D44200256F4B /* PreviousExercisesView */ = {
+			isa = PBXGroup;
+			children = (
+				A45E51FF28D8D45100256F4B /* PreviousExercisesView.swift */,
+				A45E520128D8D46B00256F4B /* PreviousExercisesButtonView.swift */,
+			);
+			path = PreviousExercisesView;
+			sourceTree = "<group>";
+		};
+		A45E520328D8F90900256F4B /* ChooseExercisesView+SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E520428D8F92D00256F4B /* ChooseExercisesView.swift */,
+				A45E520628D8F96100256F4B /* ExerciseGroupButtonView.swift */,
+				A45E520828D8F99F00256F4B /* BodyView.swift */,
+			);
+			path = "ChooseExercisesView+SubViews";
+			sourceTree = "<group>";
+		};
+		A45E520A28D90BCC00256F4B /* ExercisesView+SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E520B28D90BDB00256F4B /* ExercisesView.swift */,
+				A45E520D28D90BF200256F4B /* ExerciseButtonView+Subviews */,
+				A45E521628D90C7900256F4B /* AddSelfExerciseButton+SubViews */,
+			);
+			path = "ExercisesView+SubViews";
+			sourceTree = "<group>";
+		};
+		A45E520D28D90BF200256F4B /* ExerciseButtonView+Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E520E28D90C1E00256F4B /* ExerciseButtonView.swift */,
+				A45E521028D90C2F00256F4B /* NotPressedButtonView.swift */,
+				A45E521228D90C4500256F4B /* PressedButtonView.swift */,
+				A45E521428D90C5B00256F4B /* SetsView.swift */,
+			);
+			path = "ExerciseButtonView+Subviews";
+			sourceTree = "<group>";
+		};
+		A45E521628D90C7900256F4B /* AddSelfExerciseButton+SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E521728D90C8F00256F4B /* AddSelfExerciseButton.swift */,
+				A45E521928D90CAE00256F4B /* SelfExerciseButton.swift */,
+				A45E521B28D90CCA00256F4B /* NotPressedSelfExerciseButton.swift */,
+				A45E521D28D90CE700256F4B /* PressedSelfExerciseButtton.swift */,
+				A45E521F28D90D0700256F4B /* PressedSelfExerciseButtonSetsView.swift */,
+			);
+			path = "AddSelfExerciseButton+SubViews";
+			sourceTree = "<group>";
+		};
+		A45E522128D90D8600256F4B /* Diets */ = {
+			isa = PBXGroup;
+			children = (
+				A45E522228D90DA200256F4B /* Helpers */,
+				A45E522328D90DA800256F4B /* Models */,
+				A45E522828D90E1D00256F4B /* AddFoodView.swift */,
+				A45E522A28D90E3C00256F4B /* EditFoodView.swift */,
+				A45E522C28D90E6300256F4B /* CaloriesView.swift */,
+				A45E522E28D90E7E00256F4B /* DietDiaryView.swift */,
+			);
+			path = Diets;
+			sourceTree = "<group>";
+		};
+		A45E522228D90DA200256F4B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A45E522428D90DBF00256F4B /* TimeFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A45E522328D90DA800256F4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A45E522628D90DF700256F4B /* Day.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A4E0655628D8CC7100212950 = {
 			isa = PBXGroup;
 			children = (
 				A4E0656128D8CC7100212950 /* WorkoutDietDiary */,
 				A4E0656028D8CC7100212950 /* Products */,
+				7902E3F6BB9FE302E229DF3D /* Pods */,
+				FF5104D04ABA804C7568DC0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +275,9 @@
 			children = (
 				A4E0656228D8CC7100212950 /* WorkoutDietDiaryApp.swift */,
 				A4E0656428D8CC7100212950 /* ContentView.swift */,
+				A45E51DA28D8CEB700256F4B /* RealmManager.swift */,
+				A45E522128D90D8600256F4B /* Diets */,
+				A45E51ED28D8D24500256F4B /* Workouts */,
 				A4E0656628D8CC7200212950 /* Assets.xcassets */,
 				A4E0656828D8CC7200212950 /* Preview Content */,
 			);
@@ -67,6 +292,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FF5104D04ABA804C7568DC0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0937F998887A0030DEBF242C /* Pods_WorkoutDietDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4E0656D28D8CC7200212950 /* Build configuration list for PBXNativeTarget "WorkoutDietDiary" */;
 			buildPhases = (
+				249CF01E475C49E886F130A3 /* [CP] Check Pods Manifest.lock */,
 				A4E0655B28D8CC7100212950 /* Sources */,
 				A4E0655C28D8CC7100212950 /* Frameworks */,
 				A4E0655D28D8CC7100212950 /* Resources */,
+				356405894FA25DB2CEB7803F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +367,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		249CF01E475C49E886F130A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorkoutDietDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		356405894FA25DB2CEB7803F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4E0655B28D8CC7100212950 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45E51EC28D8CFD800256F4B /* ExerciseButtonsBackgroundView.swift in Sources */,
 				A4E0656528D8CC7100212950 /* ContentView.swift in Sources */,
+				A45E520F28D90C1E00256F4B /* ExerciseButtonView.swift in Sources */,
+				A45E51E228D8CF3400256F4B /* ExerciseGroup.swift in Sources */,
+				A45E51F228D8D2A700256F4B /* WorkoutBodyView.swift in Sources */,
+				A45E521828D90C8F00256F4B /* AddSelfExerciseButton.swift in Sources */,
+				A45E521528D90C5B00256F4B /* SetsView.swift in Sources */,
+				A45E521C28D90CCA00256F4B /* NotPressedSelfExerciseButton.swift in Sources */,
+				A45E522028D90D0700256F4B /* PressedSelfExerciseButtonSetsView.swift in Sources */,
+				A45E51F928D8D3B400256F4B /* ChoosenExerciseButtonView.swift in Sources */,
+				A45E522F28D90E7E00256F4B /* DietDiaryView.swift in Sources */,
+				A45E51FB28D8D3DE00256F4B /* ChoosenSetsView.swift in Sources */,
 				A4E0656328D8CC7100212950 /* WorkoutDietDiaryApp.swift in Sources */,
+				A45E51E028D8CF1200256F4B /* Exercises.swift in Sources */,
+				A45E520528D8F92D00256F4B /* ChooseExercisesView.swift in Sources */,
+				A45E520028D8D45100256F4B /* PreviousExercisesView.swift in Sources */,
+				A45E51F628D8D36200256F4B /* DeleteWorkoutButton.swift in Sources */,
+				A45E51FD28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift in Sources */,
+				A45E522528D90DBF00256F4B /* TimeFormatter.swift in Sources */,
+				A45E522D28D90E6300256F4B /* CaloriesView.swift in Sources */,
+				A45E520C28D90BDB00256F4B /* ExercisesView.swift in Sources */,
+				A45E522B28D90E3C00256F4B /* EditFoodView.swift in Sources */,
+				A45E520728D8F96100256F4B /* ExerciseGroupButtonView.swift in Sources */,
+				A45E521A28D90CAE00256F4B /* SelfExerciseButton.swift in Sources */,
+				A45E51E428D8CF4B00256F4B /* SelfExercises.swift in Sources */,
+				A45E51F028D8D27300256F4B /* WorkoutsView.swift in Sources */,
+				A45E521328D90C4500256F4B /* PressedButtonView.swift in Sources */,
+				A45E51DB28D8CEB700256F4B /* RealmManager.swift in Sources */,
+				A45E51E828D8CF8A00256F4B /* CustomButtonStyles.swift in Sources */,
+				A45E522728D90DF700256F4B /* Day.swift in Sources */,
+				A45E521128D90C2F00256F4B /* NotPressedButtonView.swift in Sources */,
+				A45E520228D8D46B00256F4B /* PreviousExercisesButtonView.swift in Sources */,
+				A45E51DE28D8CEF700256F4B /* Workout.swift in Sources */,
+				A45E51F428D8D2F100256F4B /* DetailWorkoutView.swift in Sources */,
+				A45E521E28D90CE700256F4B /* PressedSelfExerciseButtton.swift in Sources */,
+				A45E522928D90E1D00256F4B /* AddFoodView.swift in Sources */,
+				A45E520928D8F99F00256F4B /* BodyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +573,7 @@
 		};
 		A4E0656E28D8CC7200212950 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93BE86D74B1425BF3A4AF423 /* Pods-WorkoutDietDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +603,7 @@
 		};
 		A4E0656F28D8CC7200212950 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 557B8E99BE2761D8F6628C51 /* Pods-WorkoutDietDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
