@@ -12,63 +12,60 @@ struct CaloriesView: View {
     @EnvironmentObject var realmManager: RealmManager
     @Environment(\.dismiss) var dismiss
     @ObservedRealmObject var day: Day
-    @State private var foods: [Food] = []
-    
-    @State private var date = Date()
     @State private var showingAddView = false
     
     var body: some View {
-            VStack(alignment: .center) {
-                
-                DatePicker("Дата", selection: $day.date, displayedComponents: .date)
-                    .id(day.date)
-                    .environment(\.locale, Locale.init(identifier: "ru"))
-                    .datePickerStyle(.compact)
-                    .foregroundColor(.customRed)
-                    .font(.headline)
-                    .padding(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 11)
-                            .stroke(Color.gray, lineWidth: 0.3)
-                    )
-                    .frame(width: UIScreen.main.bounds.size.width - 40)
-                Text("\(Int(totalCaloriesToday())) Ккал за день")
-                    .foregroundColor(.customRed)
-                    .font(.headline)
-                    .padding(.horizontal)
-                List {
-                    ForEach(day.foods, id: \.id) { food in
-                        NavigationLink(destination: EditFoodView(day: day, food: food)) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 6) {
-                                    Text(food.name)
-                                        .bold()
-                                    
-                                    Text("\(Int(food.calories))") +
-                                    Text(" калорий")
-                                        .foregroundColor(Color.customRed)
-                                }
-                                Spacer()
+        VStack(alignment: .center) {
+            
+            DatePicker("Дата", selection: $day.date, displayedComponents: .date)
+                .id(day.date)
+                .environment(\.locale, Locale.init(identifier: "ru"))
+                .datePickerStyle(.compact)
+                .foregroundColor(.customRed)
+                .font(.headline)
+                .padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 11)
+                        .stroke(Color.gray, lineWidth: 0.3)
+                )
+                .frame(width: UIScreen.main.bounds.size.width - 40)
+            Text("\(Int(totalCaloriesToday())) Ккал за день")
+                .foregroundColor(.customRed)
+                .font(.headline)
+                .padding(.horizontal)
+            List {
+                ForEach(day.foods, id: \.id) { food in
+                    NavigationLink(destination: EditFoodView(day: day, food: food)) {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 6) {
+                                Text(food.name)
+                                    .bold()
+                                
+                                Text("\(Int(food.calories))") +
+                                Text(" калорий")
+                                    .foregroundColor(Color.customRed)
                             }
+                            Spacer()
                         }
                     }
-                    .onDelete(perform: deleteFood)
                 }
-                .foregroundColor(.customBlue)
-                .listStyle(.plain)
+                .onDelete(perform: deleteFood)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingAddView.toggle()
-                    } label: {
-                        Image(systemName: "plus.circle")
-                    }
+            .foregroundColor(.customBlue)
+            .listStyle(.plain)
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showingAddView.toggle()
+                } label: {
+                    Image(systemName: "plus.circle")
                 }
             }
-            .sheet(isPresented: $showingAddView) {
-                AddFoodView(day: day)
-            }
+        }
+        .sheet(isPresented: $showingAddView) {
+            AddFoodView(day: day)
+        }
     }
 }
 

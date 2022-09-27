@@ -35,9 +35,7 @@ struct EditFoodView: View {
                 HStack {
                     Spacer()
                     Button("Изменить") {
-                        realmManager.editFood(id: food.id, name: name, calories: calories)
-                        realmManager.updateCaloriesInDay(id: day.id)
-                        dismiss()
+                        editFoodInDay()
                     }
                     Spacer()
                 }
@@ -47,14 +45,11 @@ struct EditFoodView: View {
 }
 
 extension EditFoodView {
-//    private func editFoodInDay() {
-//        if var editFood = day.foods.first(where: { $0.id == food.id }) {
-//            editFood = food
-//        }
-//        realmManager.updateDay(id: day.id, date: day.date, foods: day.foods, calories: day.calories)
-//
-//        dismiss()
-//    }
+    private func editFoodInDay() {
+        realmManager.editFood(id: food.id, name: name, calories: calories)
+        realmManager.updateCaloriesInDay(id: day.id)
+        dismiss()
+    }
 }
 
 struct EditFoodView_Previews: PreviewProvider {

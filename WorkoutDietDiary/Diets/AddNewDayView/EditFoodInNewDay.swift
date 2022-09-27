@@ -10,12 +10,12 @@ import SwiftUI
 struct EditFoodInNewDay: View {
     
     @EnvironmentObject var realmManager: RealmManager
-//    @Binding var day: Day
-    var food: Food
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
     @State private var calories: Double = 0
+    
+    var food: Food
     
     var body: some View {
         Form {

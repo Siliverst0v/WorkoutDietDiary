@@ -236,8 +236,7 @@
 			children = (
 				A45E522228D90DA200256F4B /* Helpers */,
 				A45E522328D90DA800256F4B /* Models */,
-				A45E522E28D90E7E00256F4B /* DietDiaryView.swift */,
-				A425DC4328DE59ED0029E4AA /* DeleteDayButtonView.swift */,
+				A4CC1EE428E3371C001E4B3B /* DaysView */,
 				A4CC1EDF28E332BA001E4B3B /* AddNewDayView */,
 				A4CC1EDE28E33285001E4B3B /* EditDayView + SubViews */,
 			);
@@ -278,6 +277,15 @@
 				A4CC1EE228E333B6001E4B3B /* EditFoodInNewDay.swift */,
 			);
 			path = AddNewDayView;
+			sourceTree = "<group>";
+		};
+		A4CC1EE428E3371C001E4B3B /* DaysView */ = {
+			isa = PBXGroup;
+			children = (
+				A45E522E28D90E7E00256F4B /* DietDiaryView.swift */,
+				A425DC4328DE59ED0029E4AA /* DeleteDayButtonView.swift */,
+			);
+			path = DaysView;
 			sourceTree = "<group>";
 		};
 		A4E0655628D8CC7100212950 = {

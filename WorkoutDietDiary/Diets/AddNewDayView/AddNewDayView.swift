@@ -11,7 +11,6 @@ struct AddNewDayView: View {
     @EnvironmentObject var realmManager: RealmManager
     @Environment(\.dismiss) var dismiss
     @State private var day = Day()
-//    @State private var foods: [Food] = []
     @State private var showingAddView = false
     
     var body: some View {
@@ -93,9 +92,7 @@ extension AddNewDayView {
     }
     
     private func saveNewDay() {
-//        day.foods.append(objectsIn: foods)
         day.calories = day.foods.reduce(0) { $0 + $1.calories }
-        
         realmManager.addDay(day: day)
         dismiss()
     }
