@@ -171,7 +171,7 @@ struct WorkoutButtonStyle: ButtonStyle {
 }
 
 
-struct EditDeleteWorkoutButtonsStyle: ButtonStyle {
+struct DeleteButtonsStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

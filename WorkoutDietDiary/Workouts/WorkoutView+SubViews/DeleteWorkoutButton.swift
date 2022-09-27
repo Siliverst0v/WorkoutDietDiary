@@ -26,7 +26,7 @@ struct DeleteWorkoutButton: View {
                     deleteWorkout(workout: workout)
                 }
             })
-            .buttonStyle(EditDeleteWorkoutButtonsStyle())
+            .buttonStyle(DeleteButtonsStyle())
             .padding(.trailing)
         }
     }

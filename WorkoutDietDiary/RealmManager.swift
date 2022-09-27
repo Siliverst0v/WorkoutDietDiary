@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import CloudKit
 
 class RealmManager: ObservableObject {
     private(set) var localRealm: Realm?
@@ -30,7 +31,7 @@ class RealmManager: ObservableObject {
             Realm.Configuration.defaultConfiguration = config
             localRealm = try Realm()
             getWorkouts()
-            
+            getDays()
         } catch {
             print(error)
         }
@@ -330,10 +331,67 @@ class RealmManager: ObservableObject {
             
             do {
                 try localRealm.write {
-                    let newDay = Day(value: ["date": day.date, "calories": day.calories, "foods": day.foods])
+                    let calories = day.foods.reduce(0) { $0 + $1.calories }
+                    let newDay = Day(value: ["date": day.date, "calories": calories, "foods": day.foods])
                     localRealm.add(newDay)
                 }
             } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func deleteDay(id: ObjectId) {
+        if let localRealm = localRealm {
+            do {
+                let dayToDelete = localRealm.objects(Day.self).filter(NSPredicate(format: "id == %@", id))
+                guard !dayToDelete.isEmpty else {return}
+                
+                try localRealm.write {
+                    dayToDelete.forEach { day in
+                        day.foods.forEach { food in
+                            localRealm.delete(food)
+                        }
+                        localRealm.delete(day)
+                    }
+                    getDays()
+                }
+            } catch  {
+                print(error)
+            }
+        }
+    }
+    
+    func addFoodInDay(id: ObjectId, food: Food) {
+        if let localRealm = localRealm {
+            do {
+                let dayToUpdate = localRealm.objects(Day.self).filter(NSPredicate(format: "id == %@", id))
+                guard !dayToUpdate.isEmpty else {return}
+                
+                try localRealm.write {
+                    dayToUpdate[0].foods.append(food)
+                    let calories = dayToUpdate[0].foods.reduce(0) { $0 + $1.calories }
+                    dayToUpdate[0].calories = calories
+//                    getDays()
+                }
+            } catch  {
+                print(error)
+            }
+        }
+    }
+    
+    func updateCaloriesInDay(id: ObjectId) {
+        if let localRealm = localRealm {
+            do {
+                let dayToUpdate = localRealm.objects(Day.self).filter(NSPredicate(format: "id == %@", id))
+                guard !dayToUpdate.isEmpty else {return}
+                
+                try localRealm.write {
+                    let calories = dayToUpdate[0].foods.reduce(0) { $0 + $1.calories }
+                    dayToUpdate[0].calories = calories
+                }
+//                getDays()
+            } catch  {
                 print(error)
             }
         }

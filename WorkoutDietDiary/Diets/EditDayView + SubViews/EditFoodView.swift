@@ -11,8 +11,9 @@ import RealmSwift
 struct EditFoodView: View {
     
     @EnvironmentObject var realmManager: RealmManager
+    @ObservedRealmObject var day: Day
+    @ObservedRealmObject var food: Food
     @Environment(\.dismiss) var dismiss
-    var food: Results<Food>.Element
     
     @State private var name = ""
     @State private var calories: Double = 0
@@ -35,6 +36,7 @@ struct EditFoodView: View {
                     Spacer()
                     Button("Изменить") {
                         realmManager.editFood(id: food.id, name: name, calories: calories)
+                        realmManager.updateCaloriesInDay(id: day.id)
                         dismiss()
                     }
                     Spacer()
@@ -44,9 +46,20 @@ struct EditFoodView: View {
     }
 }
 
+extension EditFoodView {
+//    private func editFoodInDay() {
+//        if var editFood = day.foods.first(where: { $0.id == food.id }) {
+//            editFood = food
+//        }
+//        realmManager.updateDay(id: day.id, date: day.date, foods: day.foods, calories: day.calories)
+//
+//        dismiss()
+//    }
+}
+
 struct EditFoodView_Previews: PreviewProvider {
     static var previews: some View {
-        EditFoodView( food: Food())
+        EditFoodView( day: Exercises.shared.getMocDay(), food: Food())
             .environmentObject(RealmManager())
     }
 }

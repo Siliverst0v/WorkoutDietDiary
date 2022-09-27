@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A425DC4428DE59ED0029E4AA /* DeleteDayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425DC4328DE59ED0029E4AA /* DeleteDayButtonView.swift */; };
 		A45E51DB28D8CEB700256F4B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DA28D8CEB700256F4B /* RealmManager.swift */; };
 		A45E51DE28D8CEF700256F4B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DD28D8CEF700256F4B /* Workout.swift */; };
 		A45E51E028D8CF1200256F4B /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E51DF28D8CF1200256F4B /* Exercises.swift */; };
@@ -42,6 +43,9 @@
 		A45E522B28D90E3C00256F4B /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522A28D90E3C00256F4B /* EditFoodView.swift */; };
 		A45E522D28D90E6300256F4B /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522C28D90E6300256F4B /* CaloriesView.swift */; };
 		A45E522F28D90E7E00256F4B /* DietDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E522E28D90E7E00256F4B /* DietDiaryView.swift */; };
+		A4AB8EDE28DBBCF5001B2412 /* AddNewDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB8EDD28DBBCF5001B2412 /* AddNewDayView.swift */; };
+		A4CC1EE128E332E6001E4B3B /* AddFoodToNewDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC1EE028E332E6001E4B3B /* AddFoodToNewDayView.swift */; };
+		A4CC1EE328E333B6001E4B3B /* EditFoodInNewDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC1EE228E333B6001E4B3B /* EditFoodInNewDay.swift */; };
 		A4E0656328D8CC7100212950 /* WorkoutDietDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0656228D8CC7100212950 /* WorkoutDietDiaryApp.swift */; };
 		A4E0656528D8CC7100212950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0656428D8CC7100212950 /* ContentView.swift */; };
 		A4E0656728D8CC7200212950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E0656628D8CC7200212950 /* Assets.xcassets */; };
@@ -53,6 +57,7 @@
 		0937F998887A0030DEBF242C /* Pods_WorkoutDietDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkoutDietDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B8E99BE2761D8F6628C51 /* Pods-WorkoutDietDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutDietDiary.release.xcconfig"; path = "Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary.release.xcconfig"; sourceTree = "<group>"; };
 		93BE86D74B1425BF3A4AF423 /* Pods-WorkoutDietDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutDietDiary.debug.xcconfig"; path = "Target Support Files/Pods-WorkoutDietDiary/Pods-WorkoutDietDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		A425DC4328DE59ED0029E4AA /* DeleteDayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDayButtonView.swift; sourceTree = "<group>"; };
 		A45E51DA28D8CEB700256F4B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		A45E51DD28D8CEF700256F4B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		A45E51DF28D8CF1200256F4B /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 		A45E522A28D90E3C00256F4B /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		A45E522C28D90E6300256F4B /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
 		A45E522E28D90E7E00256F4B /* DietDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietDiaryView.swift; sourceTree = "<group>"; };
+		A4AB8EDD28DBBCF5001B2412 /* AddNewDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDayView.swift; sourceTree = "<group>"; };
+		A4CC1EE028E332E6001E4B3B /* AddFoodToNewDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodToNewDayView.swift; sourceTree = "<group>"; };
+		A4CC1EE228E333B6001E4B3B /* EditFoodInNewDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodInNewDay.swift; sourceTree = "<group>"; };
 		A4E0655F28D8CC7100212950 /* WorkoutDietDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutDietDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E0656228D8CC7100212950 /* WorkoutDietDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDietDiaryApp.swift; sourceTree = "<group>"; };
 		A4E0656428D8CC7100212950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,10 +236,10 @@
 			children = (
 				A45E522228D90DA200256F4B /* Helpers */,
 				A45E522328D90DA800256F4B /* Models */,
-				A45E522828D90E1D00256F4B /* AddFoodView.swift */,
-				A45E522A28D90E3C00256F4B /* EditFoodView.swift */,
-				A45E522C28D90E6300256F4B /* CaloriesView.swift */,
 				A45E522E28D90E7E00256F4B /* DietDiaryView.swift */,
+				A425DC4328DE59ED0029E4AA /* DeleteDayButtonView.swift */,
+				A4CC1EDF28E332BA001E4B3B /* AddNewDayView */,
+				A4CC1EDE28E33285001E4B3B /* EditDayView + SubViews */,
 			);
 			path = Diets;
 			sourceTree = "<group>";
@@ -250,6 +258,26 @@
 				A45E522628D90DF700256F4B /* Day.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A4CC1EDE28E33285001E4B3B /* EditDayView + SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				A45E522C28D90E6300256F4B /* CaloriesView.swift */,
+				A45E522828D90E1D00256F4B /* AddFoodView.swift */,
+				A45E522A28D90E3C00256F4B /* EditFoodView.swift */,
+			);
+			path = "EditDayView + SubViews";
+			sourceTree = "<group>";
+		};
+		A4CC1EDF28E332BA001E4B3B /* AddNewDayView */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB8EDD28DBBCF5001B2412 /* AddNewDayView.swift */,
+				A4CC1EE028E332E6001E4B3B /* AddFoodToNewDayView.swift */,
+				A4CC1EE228E333B6001E4B3B /* EditFoodInNewDay.swift */,
+			);
+			path = AddNewDayView;
 			sourceTree = "<group>";
 		};
 		A4E0655628D8CC7100212950 = {
@@ -418,6 +446,7 @@
 				A4E0656528D8CC7100212950 /* ContentView.swift in Sources */,
 				A45E520F28D90C1E00256F4B /* ExerciseButtonView.swift in Sources */,
 				A45E51E228D8CF3400256F4B /* ExerciseGroup.swift in Sources */,
+				A425DC4428DE59ED0029E4AA /* DeleteDayButtonView.swift in Sources */,
 				A45E51F228D8D2A700256F4B /* WorkoutBodyView.swift in Sources */,
 				A45E521828D90C8F00256F4B /* AddSelfExerciseButton.swift in Sources */,
 				A45E521528D90C5B00256F4B /* SetsView.swift in Sources */,
@@ -432,6 +461,7 @@
 				A45E520028D8D45100256F4B /* PreviousExercisesView.swift in Sources */,
 				A45E51F628D8D36200256F4B /* DeleteWorkoutButton.swift in Sources */,
 				A45E51FD28D8D40200256F4B /* NotPressedChoosenExerciseButtonView.swift in Sources */,
+				A4CC1EE128E332E6001E4B3B /* AddFoodToNewDayView.swift in Sources */,
 				A45E522528D90DBF00256F4B /* TimeFormatter.swift in Sources */,
 				A45E522D28D90E6300256F4B /* CaloriesView.swift in Sources */,
 				A45E520C28D90BDB00256F4B /* ExercisesView.swift in Sources */,
@@ -443,10 +473,12 @@
 				A45E521328D90C4500256F4B /* PressedButtonView.swift in Sources */,
 				A45E51DB28D8CEB700256F4B /* RealmManager.swift in Sources */,
 				A45E51E828D8CF8A00256F4B /* CustomButtonStyles.swift in Sources */,
+				A4CC1EE328E333B6001E4B3B /* EditFoodInNewDay.swift in Sources */,
 				A45E522728D90DF700256F4B /* Day.swift in Sources */,
 				A45E521128D90C2F00256F4B /* NotPressedButtonView.swift in Sources */,
 				A45E520228D8D46B00256F4B /* PreviousExercisesButtonView.swift in Sources */,
 				A45E51DE28D8CEF700256F4B /* Workout.swift in Sources */,
+				A4AB8EDE28DBBCF5001B2412 /* AddNewDayView.swift in Sources */,
 				A45E51F428D8D2F100256F4B /* DetailWorkoutView.swift in Sources */,
 				A45E521E28D90CE700256F4B /* PressedSelfExerciseButtton.swift in Sources */,
 				A45E522928D90E1D00256F4B /* AddFoodView.swift in Sources */,

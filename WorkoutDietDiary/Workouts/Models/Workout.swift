@@ -29,7 +29,7 @@ class ChoosenExercise: Object, ObjectKeyIdentifiable {
     @Persisted var note: String
     @Persisted var date: Date
     @Persisted var sets: List<Set>
-    @Persisted(originProperty: "choosenExercises") var realmWorkout: LinkingObjects<Workout>
+    @Persisted(originProperty: "choosenExercises") var workout: LinkingObjects<Workout>
     
     convenience init(icon: String, title: String, note: String, date: Date) {
         self.init()
@@ -44,7 +44,7 @@ class Set: Object, ObjectKeyIdentifiable {
     @Persisted var id: Int
     @Persisted var repeats: String
     @Persisted var weight: String
-    @Persisted(originProperty: "sets") var realmChoosenExercises: LinkingObjects<ChoosenExercise>
+    @Persisted(originProperty: "sets") var choosenExercises: LinkingObjects<ChoosenExercise>
     
     convenience init(id: Int, repeats: String, weight: String) {
         self.init()

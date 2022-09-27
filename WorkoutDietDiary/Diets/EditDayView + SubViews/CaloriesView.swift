@@ -11,20 +11,17 @@ import RealmSwift
 struct CaloriesView: View {
     @EnvironmentObject var realmManager: RealmManager
     @Environment(\.dismiss) var dismiss
-    @ObservedResults(Food.self) var foods
     @ObservedRealmObject var day: Day
+    @State private var foods: [Food] = []
     
-    // Delete and change on day.date
     @State private var date = Date()
-    
     @State private var showingAddView = false
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .center) {
                 
-                DatePicker("Дата", selection: $date, displayedComponents: .date)
-                    .id(Date())
+                DatePicker("Дата", selection: $day.date, displayedComponents: .date)
+                    .id(day.date)
                     .environment(\.locale, Locale.init(identifier: "ru"))
                     .datePickerStyle(.compact)
                     .foregroundColor(.customRed)
@@ -41,7 +38,7 @@ struct CaloriesView: View {
                     .padding(.horizontal)
                 List {
                     ForEach(day.foods, id: \.id) { food in
-                        NavigationLink(destination: EditFoodView(food: food)) {
+                        NavigationLink(destination: EditFoodView(day: day, food: food)) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(food.name)
@@ -60,16 +57,7 @@ struct CaloriesView: View {
                 .foregroundColor(.customBlue)
                 .listStyle(.plain)
             }
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("Сохранить")
-                    }
-
-                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showingAddView.toggle()
@@ -79,33 +67,28 @@ struct CaloriesView: View {
                 }
             }
             .sheet(isPresented: $showingAddView) {
-                AddFoodView()
+                AddFoodView(day: day)
             }
-        }
-        .navigationViewStyle(.stack)
     }
 }
 
 extension CaloriesView {
+    
     private func totalCaloriesToday() -> Double {
-        var caloriesToday: Double = 0
-        for item in day.foods {
-            if Calendar.current.isDateInToday(item.date) {
-                caloriesToday += item.calories
-            }
-        }
-        return caloriesToday
+        return day.foods.reduce(0) { $0 + $1.calories }
     }
     
-    private func saveNewDay() {
-        realmManager.addDay(day: day)
+    private func updateCalories() {
+        realmManager.updateCaloriesInDay(id: day.id)
     }
     
     private func deleteFood(offSets: IndexSet) {
         offSets.forEach { index in
-            realmManager.deleteFood(id: foods[index].id)
+            let foodToDelete = day.foods[index]
+            realmManager.deleteFood(id: foodToDelete.id)
         }
         realmManager.getFoods()
+        realmManager.updateCaloriesInDay(id: day.id)
     }
 }
 

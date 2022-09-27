@@ -10,52 +10,71 @@ import RealmSwift
 
 struct DietDiaryView: View {
     @StateObject var realmManager = RealmManager()
-    @ObservedResults(Day.self) var days
-    @State private var showingCaloriesView = false
+    @ObservedResults(Day.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var days
+    @State private var dietDiaryIsActive = false
+    @State var selection: String? = nil
+    @State var daySelection: ObjectId? = ObjectId()
     
     var body: some View {
-        ScrollView {
-            
-            Button { showingCaloriesView.toggle() } label: {
-                ZStack {
-                    Text("Добавить день")
-                        .font(.headline)
-                    .foregroundColor(.customRed)
+        NavigationView {
+            ScrollView {
+                ForEach(days, id: \.id) { day in
+                    VStack(alignment: .trailing, spacing: 0) {
+                        DeleteDayButtonView(day: day)
+                            .environmentObject(realmManager)
+                        Button { daySelection = day.id } label: {
+                            ZStack {
+                                HStack {
+                                    Spacer()
+                                    Image("Food")
+                                        .resizable()
+                                        .frame(width: 50, height: 50)
+                                    Text("\(Int(day.calories)) Калорий")
+                                        .foregroundColor(.customRed)
+                                        .font(.headline)
+                                        .frame(width: 110)
+                                    Spacer()
+                                    Text("\(dateFormat(date: day.date))")
+                                        .foregroundColor(.customBlue)
+                                        .font(.headline)
+                                        .frame(width: 100)
+                                    Spacer()
+                                }
+                                NavigationLink("",
+                                               tag: day.id,
+                                               selection: $daySelection) {
+                                    
+                                    CaloriesView(day: day)
+                                        .environmentObject(realmManager)
+                                }
+                            }
+                            .frame(
+                                width: UIScreen.main.bounds.size.width - 40,
+                                height: 90,
+                                alignment: .center
+                            )
+                        }
+                        .buttonStyle(WorkoutButtonStyle())
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical, 5)
                 }
-                .frame(width: UIScreen.main.bounds.size.width - 40, height: 90, alignment: .center)
             }
-            .padding(.horizontal)
-            .buttonStyle(WorkoutButtonStyle())
-            .sheet(isPresented: $showingCaloriesView) {
-                CaloriesView(day: Day())
-            }
-
-            ForEach(days, id: \.id) { day in
-                Button { showingCaloriesView.toggle() } label: {
-                    ZStack {
-                        HStack {
-                            Spacer()
-                            Image("Food")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                            Text("\(Int(day.calories)) Калорий")
-                                .foregroundColor(.customRed)
-                                .font(.headline)
-                                .frame(width: 110)
-                            Spacer()
-                            Text("\(dateFormat(date: day.date))")
-                                .foregroundColor(.customBlue)
-                                .font(.headline)
-                                .frame(width: 100)
-                            Spacer()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dietDiaryIsActive = true
+                        self.selection = "CaloriesView"
+                        
+                    } label: {
+                        Image(systemName: "plus.circle")
+                        NavigationLink("",
+                                       tag: dietDiaryIsActive ? "CaloriesView" : "",
+                                       selection: $selection) {
+                            AddNewDayView()
                         }
                     }
-                    .frame(width: UIScreen.main.bounds.size.width - 40, height: 90, alignment: .center)
-                }
-                .padding(.horizontal)
-                .buttonStyle(WorkoutButtonStyle())
-                .sheet(isPresented: $showingCaloriesView) {
-                    CaloriesView(day: day)
                 }
             }
         }
@@ -63,6 +82,7 @@ struct DietDiaryView: View {
 }
 
 extension DietDiaryView {
+    
     private func dateFormat(date: Date) -> String {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yyyy"

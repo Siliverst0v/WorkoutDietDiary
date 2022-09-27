@@ -1,18 +1,18 @@
 //
-//  AddFoodView.swift
+//  AddFoodToNewDayView.swift
 //  WorkoutDietDiary
 //
-//  Created by Анатолий Силиверстов on 19.09.2022.
+//  Created by Анатолий Силиверстов on 27.09.2022.
 //
 
 import SwiftUI
 
-struct AddFoodView: View {
-    @EnvironmentObject var realmManager: RealmManager
+struct AddFoodToNewDayView: View {
     @Environment(\.dismiss) var dismiss
-    
+    @Binding var day: Day
     @State private var name = ""
     @State private var calories: Double = 0
+    
     var body: some View {
         Form {
             Section {
@@ -27,7 +27,8 @@ struct AddFoodView: View {
                 HStack {
                     Spacer()
                     Button("Добавить") {
-                        realmManager.addFood(name: name, calories: calories)
+                        let food = Food(name: name, calories: calories, date: day.date)
+                        day.foods.append(food)
                         dismiss()
                     }
                     Spacer()
@@ -37,8 +38,8 @@ struct AddFoodView: View {
     }
 }
 
-struct AddFoodView_Previews: PreviewProvider {
+struct AddFoodToNewDayView_Previews: PreviewProvider {
     static var previews: some View {
-        AddFoodView()
+        AddFoodToNewDayView( day: .constant(Exercises.shared.getMocDay()))
     }
 }
