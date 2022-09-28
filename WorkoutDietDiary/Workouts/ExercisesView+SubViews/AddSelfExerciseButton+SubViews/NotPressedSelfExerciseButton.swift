@@ -34,7 +34,7 @@ struct NotPressedSelfExerciseButton: View {
                     Text(selfExercise.title)
                         .fontWeight(.semibold)
                         .lineLimit(3)
-                        .frame(width: buttonWidth - 140,
+                        .frame(width: width - 140,
                                height: 70,
                                alignment: .leading)
                     Spacer()

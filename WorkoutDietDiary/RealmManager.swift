@@ -21,6 +21,7 @@ class RealmManager: ObservableObject {
     init() {
         openRealm()
         getWorkouts()
+        getDays()
     }
     
     func openRealm() {
@@ -372,7 +373,6 @@ class RealmManager: ObservableObject {
                     dayToUpdate[0].foods.append(food)
                     let calories = dayToUpdate[0].foods.reduce(0) { $0 + $1.calories }
                     dayToUpdate[0].calories = calories
-//                    getDays()
                 }
             } catch  {
                 print(error)
@@ -390,7 +390,6 @@ class RealmManager: ObservableObject {
                     let calories = dayToUpdate[0].foods.reduce(0) { $0 + $1.calories }
                     dayToUpdate[0].calories = calories
                 }
-//                getDays()
             } catch  {
                 print(error)
             }

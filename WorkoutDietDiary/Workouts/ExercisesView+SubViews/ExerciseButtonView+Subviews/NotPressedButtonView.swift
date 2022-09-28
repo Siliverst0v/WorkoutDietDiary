@@ -18,8 +18,6 @@ struct NotPressedButtonView: View {
     @Binding var image: String
     @Binding var title: String
     @Binding var note: String
-    
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
 
     var body: some View {
         ZStack{
@@ -34,7 +32,7 @@ struct NotPressedButtonView: View {
                         .fontWeight(.semibold)
                         .lineLimit(3)
                         .frame(
-                            width: buttonWidth - 140,
+                            width: width - 140,
                             height: 70,
                             alignment: .leading)
                     Spacer()
@@ -48,7 +46,7 @@ struct NotPressedButtonView: View {
                     }
                     Spacer()
                 }
-                .frame(width: buttonWidth, height: 70, alignment: .center)
+                .frame(width: width, height: 70, alignment: .center)
             }
             .buttonStyle(ExerciseButtonStyle())
         }

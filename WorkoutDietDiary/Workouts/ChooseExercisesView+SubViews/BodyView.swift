@@ -42,7 +42,7 @@ struct BodyView: View {
                 .resizable()
                 .opacity(showIcons(muscleGroupName: "Кардио") ? 1 : 0)
         }
-        .frame(width: UIScreen.main.bounds.size.width - 40, height: 300, alignment: .center)
+        .frame(width: width, height: width > 380 ? 300 : 200, alignment: .center)
         .padding(.vertical, 5)
         .overlay(
             RoundedRectangle(cornerRadius: 11)

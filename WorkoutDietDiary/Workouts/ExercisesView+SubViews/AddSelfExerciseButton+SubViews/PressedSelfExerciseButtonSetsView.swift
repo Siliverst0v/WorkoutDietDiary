@@ -19,8 +19,6 @@ struct PressedSelfExerciseButtonSetsView: View {
     @Binding var showingSheet: Bool
     @Binding var previousExercises: [ChoosenExercise]
     
-    let buttonWidth: CGFloat = UIScreen.main.bounds.size.width - 40
-    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -39,7 +37,7 @@ struct PressedSelfExerciseButtonSetsView: View {
                 Spacer()
             }
             .font(.system(size: 14))
-            .frame(width: buttonWidth/1.1)
+            .frame(width: width/1.1)
             
             ForEach($sets, id: \.id) { setNumber in
                 HStack() {
@@ -64,7 +62,7 @@ struct PressedSelfExerciseButtonSetsView: View {
                     Spacer()
                     
                 }
-                .frame(width: buttonWidth/1.1)
+                .frame(width: width/1.1)
             }
             
             HStack {
@@ -116,11 +114,11 @@ struct PressedSelfExerciseButtonSetsView: View {
                 }
                 .buttonStyle(SimpleButtonStyle())
                 .sheet(isPresented: $showingSheet, content: {
-                    PreviousExercisesView(previousExercises: $previousExercises)
+                    PreviousExercisesView(previousExercises: $previousExercises, showingSheet: $showingSheet)
                 })
                 Spacer()
             }
-            .frame(width: buttonWidth/1.1)
+            .frame(width: width/1.1)
 
         }
     }

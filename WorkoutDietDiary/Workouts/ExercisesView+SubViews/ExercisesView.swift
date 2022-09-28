@@ -36,7 +36,7 @@ struct ExercisesView: View {
                         .font(.custom("title", size: 20))
                         .foregroundColor(.customBlue)
                 }
-                .frame(maxWidth: UIScreen.main.bounds.size.width - 40, alignment: .leading)
+                .frame(maxWidth: width, alignment: .leading)
                 Divider()
                 AddSelfExerciseButton(
                     isFocused: _isFocused,
@@ -57,7 +57,7 @@ struct ExercisesView: View {
                         .font(.custom("title", size: 20))
                         .foregroundColor(.customBlue)
                 }
-                .frame(maxWidth: UIScreen.main.bounds.size.width - 40, alignment: .leading)
+                .frame(maxWidth: width, alignment: .leading)
                 Divider()
                 ForEach(exerciseGroup.exercisesToDisplay, id: \.self) {exercise in
                     ExerciseButton(
@@ -95,7 +95,7 @@ extension ExercisesView {
         if let workout = updatableWorkout {
             realmManager.updateWorkout(
                 id: workout.id,
-                date: date,
+                date: workout.date,
                 exerciseGroups: choosenExerciseGroups.map {$0.title},
                 choosenExercises: choosenExercises)
         } else {

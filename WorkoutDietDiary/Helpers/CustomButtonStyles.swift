@@ -11,9 +11,9 @@ struct ExerciseButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .font(.system(size: 14))
+            .font(adaptiveSystemFont())
             .foregroundColor(.customBlue)
-            .frame(width: UIScreen.main.bounds.size.width - 40,
+            .frame(width: width,
                    height: 70,
                    alignment: .center)
             .background(
@@ -81,6 +81,7 @@ struct ExerciseGroupButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .font(adaptiveSystemFont())
             .background(
                 Group {
                     if isPressed {
@@ -127,7 +128,7 @@ struct WorkoutButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(width: UIScreen.main.bounds.size.width - 40)
+            .frame(width: width)
             .background (
                 Group {
                     if configuration.isPressed {
@@ -226,32 +227,4 @@ struct DeleteButtonsStyle: ButtonStyle {
                 }
             )
     }
-}
-
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
-    }
-}
-
-struct RoundedCorner: Shape {
-
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
-
-extension LinearGradient {
-    init(_ colors: Color...) {
-        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
-}
-
-extension Color {
-    static let customBlue = Color(red: 72/255, green: 110/255, blue: 158/255)
-    static let customRed = Color(red: 216/255, green: 75/255, blue: 89/255)
 }

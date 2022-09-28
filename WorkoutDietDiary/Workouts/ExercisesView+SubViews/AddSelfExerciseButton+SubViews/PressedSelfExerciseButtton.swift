@@ -27,12 +27,10 @@ struct PressedSelfExerciseButton: View {
     @Binding var note: String
     @State var showConfirm: Bool = false
     
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
-    
     var body: some View {
         ZStack(alignment: .top) {
             ExerciseButtonsBackgroundView(
-                width: buttonWidth,
+                width: width,
                 height: backgroundHeight + CGFloat(((sets.count - 1) * 46)))
             VStack(alignment: .center) {
                 HStack {
@@ -47,7 +45,7 @@ struct PressedSelfExerciseButton: View {
                         .foregroundColor(.customBlue)
                         .lineLimit(3)
                         .frame(
-                            width: buttonWidth - 140,
+                            width: width - 140,
                             height: 60,
                             alignment: .leading)
                     Spacer()
@@ -60,14 +58,14 @@ struct PressedSelfExerciseButton: View {
                                    alignment: .center)
                     }
                     .buttonStyle(SimpleButtonStyle())
-                    .confirmationDialog("", isPresented: $showConfirm, actions: {
+                    .confirmationDialog("Удалить упражнение?", isPresented: $showConfirm, titleVisibility: .visible, actions: {
                         Button("Удалить", role: .destructive) {
                             deleteSelfExercise()
                         }
                     })
                     Spacer()
                 }
-                .frame(width: buttonWidth, height: 70, alignment: .center)
+                .frame(width: width, height: 70, alignment: .center)
                 
                 PressedSelfExerciseButtonSetsView(
                     isFocused: _isFocused,
@@ -82,7 +80,7 @@ struct PressedSelfExerciseButton: View {
                     .focused($isFocused, equals: true)
                     .foregroundColor(.customBlue)
                     .lineLimit(2)
-                    .frame(width: UIScreen.main.bounds.size.width - 80, height: 80)
+                    .frame(width: width - 40, height: 80)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)

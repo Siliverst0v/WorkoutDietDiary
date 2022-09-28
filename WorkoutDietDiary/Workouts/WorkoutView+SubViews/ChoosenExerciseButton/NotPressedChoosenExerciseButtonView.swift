@@ -16,7 +16,6 @@ struct NotPressedChoosenExerciseButtonView: View {
     var title: String
     
     @Binding var showConfirm: Bool
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
     
     var body: some View {
         ZStack{
@@ -31,7 +30,7 @@ struct NotPressedChoosenExerciseButtonView: View {
                         .fontWeight(.semibold)
                         .lineLimit(3)
                         .frame(
-                            width: buttonWidth - 140,
+                            width: width - 140,
                             height: 70,
                             alignment: .leading)
                     Spacer()
@@ -47,7 +46,7 @@ struct NotPressedChoosenExerciseButtonView: View {
                     .disabled(true)
                     Spacer()
                 }
-                .frame(width: buttonWidth, height: 70, alignment: .center)
+                .frame(width: width, height: 70, alignment: .center)
             }
             .buttonStyle(ExerciseButtonStyle())
         }

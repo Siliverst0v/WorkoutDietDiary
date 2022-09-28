@@ -16,7 +16,6 @@ struct ChoosenSetsView: View {
     @Binding var buttonNotPressed: Bool
     @Binding var showingSheet: Bool
     @Binding var previousExercises: [ChoosenExercise]
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -36,7 +35,7 @@ struct ChoosenSetsView: View {
                 Spacer()
             }
             .font(.system(size: 14))
-            .frame(width: buttonWidth/1.1)
+            .frame(width: width/1.1)
             
             ForEach($choosenExercise.sets, id: \.id) { setNumber in
                 HStack() {
@@ -61,7 +60,7 @@ struct ChoosenSetsView: View {
                     Spacer()
                     
                 }
-                .frame(width: buttonWidth/1.1)
+                .frame(width: width/1.1)
             }
             
             HStack {
@@ -113,12 +112,21 @@ struct ChoosenSetsView: View {
                 }
                 .buttonStyle(SimpleButtonStyle())
                 .sheet(isPresented: $showingSheet, content: {
-                    PreviousExercisesView(previousExercises: $previousExercises)
+                    NavigationView {
+                    PreviousExercisesView(previousExercises: $previousExercises, showingSheet: $showingSheet)
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button { showingSheet.toggle() } label: {
+                                    Text("Готово")
+                                }
+                            }
+                        }
+                    }
                 })
                 Spacer()
             }
-            .frame(width: buttonWidth/1.1)
-
+            .frame(width: width/1.1)
         }
     }
     

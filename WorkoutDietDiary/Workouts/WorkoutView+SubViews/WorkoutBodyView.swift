@@ -43,7 +43,7 @@ struct WorkoutBodyView: View {
                     .resizable()
                     .opacity(workout.exerciseGroups.contains("Кардио") ? 1 : 0)
             }
-            .frame(height: 160)
+            .frame(height: width > 380 ? 160 : 120)
             .padding()
     }
 }

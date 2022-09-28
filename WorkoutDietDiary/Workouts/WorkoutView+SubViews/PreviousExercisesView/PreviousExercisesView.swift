@@ -11,6 +11,7 @@ struct PreviousExercisesView: View {
     @Environment(\.dismiss) var dismiss
     
     @Binding var previousExercises: [ChoosenExercise]
+    @Binding var showingSheet: Bool
     
     var body: some View {
         if !previousExercises.isEmpty {
@@ -34,8 +35,7 @@ struct PreviousExercisesView: View {
                         }
                     }
                     .padding()
-        }
-        else {
+        } else {
             VStack {
                 Spacer()
                 Text("Тренировки с таким упражнением не найдены")
@@ -43,25 +43,10 @@ struct PreviousExercisesView: View {
                 .foregroundColor(.customRed)
                 .font(.title)
                 .padding()
-                .background(
+                .overlay(
                     RoundedRectangle(cornerRadius: 11)
-                        .fill(.white)
-                        .shadow(color: .black.opacity(0.2),
-                                radius: 10, x: 5, y: 5)
-                        .shadow(color: .white.opacity(0.7),
-                                radius: 10, x: -5, y: -5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 11)
-                                .stroke(Color.gray, lineWidth: 0.1)
-                        )
+                        .stroke(Color.gray, lineWidth: 0.3)
                 )
-                Spacer()
-                Button { dismiss() } label: {
-                    Text("Назад")
-                        .padding()
-                        .foregroundColor(Color.customBlue)
-                }
-                .buttonStyle(SimpleButtonStyle())
                 Spacer()
             }
         }
@@ -70,6 +55,6 @@ struct PreviousExercisesView: View {
 
 struct PreviousExercises_Previews: PreviewProvider {
     static var previews: some View {
-        PreviousExercisesView(previousExercises: .constant( [Exercises.shared.getMocExercise().choosenExercises.first!]))
+        PreviousExercisesView(previousExercises: .constant( [Exercises.shared.getMocExercise().choosenExercises.first!]), showingSheet: .constant(true))
     }
 }

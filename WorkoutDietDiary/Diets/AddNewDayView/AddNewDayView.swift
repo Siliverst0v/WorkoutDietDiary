@@ -27,7 +27,7 @@ struct AddNewDayView: View {
                     RoundedRectangle(cornerRadius: 11)
                         .stroke(Color.gray, lineWidth: 0.3)
                 )
-                .frame(width: UIScreen.main.bounds.size.width - 40)
+                .frame(width: width)
             Text("\(Int(totalCaloriesToday())) Ккал за день")
                 .foregroundColor(.customRed)
                 .font(.headline)
@@ -52,23 +52,6 @@ struct AddNewDayView: View {
             }
             .foregroundColor(.customBlue)
             .listStyle(.plain)
-            Button { saveNewDay() } label: {
-                ZStack {
-                    Text("Добавить день")
-                        .foregroundColor(.customRed)
-                        .font(.headline)
-                        .background(
-                            RoundedRectangle(cornerRadius: 11)
-                                .fill(.white)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 11)
-                                        .stroke(Color.black, lineWidth: 0.2)
-                                )
-                                .frame(width: UIScreen.main.bounds.size.width - 40, height: 70, alignment: .center)
-                        )
-                }
-            }
-            .offset(x: 0, y: -60)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -76,6 +59,13 @@ struct AddNewDayView: View {
                     showingAddView.toggle()
                 } label: {
                     Image(systemName: "plus.circle")
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    saveNewDay()
+                } label: {
+                    Image(systemName: "checkmark")
                 }
             }
         }
@@ -107,5 +97,6 @@ extension AddNewDayView {
 struct AddDayView_Previews: PreviewProvider {
     static var previews: some View {
         AddNewDayView()
+            .environmentObject(RealmManager())
     }
 }

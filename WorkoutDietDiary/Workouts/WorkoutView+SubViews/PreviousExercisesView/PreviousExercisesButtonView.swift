@@ -10,14 +10,12 @@ import SwiftUI
 struct PreviousExercisesButton: View {
     
     @State private var backgroundHeight: CGFloat = 248
-    
     @State var choosenExercise: ChoosenExercise
     
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
     var body: some View {
         ZStack(alignment: .top) {
             ExerciseButtonsBackgroundView(
-                width: buttonWidth,
+                width: width,
                 height: backgroundHeight + CGFloat(((choosenExercise.sets.count - 1) * 46)))
             VStack(alignment: .center) {
                 HStack {
@@ -32,12 +30,12 @@ struct PreviousExercisesButton: View {
                         .foregroundColor(.customBlue)
                         .lineLimit(3)
                         .frame(
-                            width: buttonWidth - 92,
+                            width: width - 92,
                             height: 60,
                             alignment: .leading)
                     Spacer()
                 }
-                .frame(width: buttonWidth, height: 70, alignment: .center)
+                .frame(width: width, height: 70, alignment: .center)
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -56,7 +54,7 @@ struct PreviousExercisesButton: View {
                         Spacer()
                     }
                     .font(.system(size: 14))
-                    .frame(width: buttonWidth/1.1)
+                    .frame(width: width/1.1)
                     
                     ForEach($choosenExercise.sets, id: \.id) { setNumber in
                         HStack() {
@@ -81,7 +79,7 @@ struct PreviousExercisesButton: View {
                             Spacer()
                             
                         }
-                        .frame(width: buttonWidth/1.1)
+                        .frame(width: width/1.1)
                     }
                 }
                 
@@ -89,7 +87,7 @@ struct PreviousExercisesButton: View {
                     .disabled(true)
                     .foregroundColor(.customBlue)
                     .lineLimit(2)
-                    .frame(width: UIScreen.main.bounds.size.width - 80, height: 80)
+                    .frame(width: width - 40, height: 80)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)

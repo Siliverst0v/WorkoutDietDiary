@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         TabView {
             WorkoutsView()
@@ -19,9 +20,10 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "fork.knife.circle.fill")
                     Text("Дневник калорий")
-
+                    
                 }
         }
+        .accentColor(.customBlue)
     }
 }
 

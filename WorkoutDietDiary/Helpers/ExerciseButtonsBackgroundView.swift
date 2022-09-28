@@ -45,6 +45,6 @@ struct ExerciseButtonsBackgroundView: View {
 
 struct ExerciseButtonsBackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseButtonsBackgroundView(width: UIScreen.main.bounds.size.width - 40, height: 260)
+        ExerciseButtonsBackgroundView(width: width, height: 260)
     }
 }

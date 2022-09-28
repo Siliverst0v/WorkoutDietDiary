@@ -19,9 +19,6 @@ struct ChoosenExerciseButtonView: View {
     @State var previousExercises: [ChoosenExercise] = []
     @State var showConfirm: Bool = false
     
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
-    
-    
     var body: some View {
         if buttonNotPressed {
             NotPressedChoosenExerciseButtonView(
@@ -33,7 +30,7 @@ struct ChoosenExerciseButtonView: View {
         } else {
             ZStack(alignment: .top) {
                 ExerciseButtonsBackgroundView(
-                    width: buttonWidth,
+                    width: width,
                     height: backgroundHeight + CGFloat(((choosenExercise.sets.count - 1) * 46)))
                 VStack(alignment: .center) {
                     HStack {
@@ -48,7 +45,7 @@ struct ChoosenExerciseButtonView: View {
                             .foregroundColor(.customBlue)
                             .lineLimit(3)
                             .frame(
-                                width: buttonWidth - 140,
+                                width: width - 140,
                                 height: 60,
                                 alignment: .leading)
                         Spacer()
@@ -68,7 +65,7 @@ struct ChoosenExerciseButtonView: View {
                         .buttonStyle(SimpleButtonStyle())
                         Spacer()
                     }
-                    .frame(width: buttonWidth, height: 70, alignment: .center)
+                    .frame(width: width, height: 70, alignment: .center)
                     
                     ChoosenSetsView(
                         choosenExercise: choosenExercise,
@@ -81,7 +78,7 @@ struct ChoosenExerciseButtonView: View {
                         .focused($isFocused, equals: true)
                         .foregroundColor(.customBlue)
                         .lineLimit(2)
-                        .frame(width: UIScreen.main.bounds.size.width - 80, height: 80)
+                        .frame(width: width - 40, height: 80)
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)

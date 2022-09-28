@@ -16,8 +16,6 @@ struct AddSelfExerciseButton: View {
     @Binding var image: String
     @Binding var exerciseGroupName: String
     
-    let buttonWidth = UIScreen.main.bounds.size.width - 40
-    
     var body: some View {
         if buttonNotPressed {
             ZStack {
@@ -33,7 +31,7 @@ struct AddSelfExerciseButton: View {
                             .foregroundColor(.customRed)
                             .lineLimit(3)
                             .frame(width:
-                                    buttonWidth - 140,
+                                    width - 140,
                                    height: 70,
                                    alignment: .center)
                         Spacer()
@@ -52,7 +50,7 @@ struct AddSelfExerciseButton: View {
             ZStack(alignment: .top) {
                 
                 ExerciseButtonsBackgroundView(
-                    width: buttonWidth,
+                    width: width,
                     height: CGFloat(260))
                 VStack(alignment: .center) {
                     HStack {
@@ -67,7 +65,7 @@ struct AddSelfExerciseButton: View {
                             .foregroundColor(.customRed)
                             .lineLimit(3)
                             .frame(width:
-                                    buttonWidth - 140,
+                                    width - 140,
                                    height: 70,
                                    alignment: .center)
                         Spacer()
@@ -82,15 +80,15 @@ struct AddSelfExerciseButton: View {
                         .buttonStyle(SimpleButtonStyle())
                         Spacer()
                     }
-                    .frame(width: buttonWidth, height: 70)
+                    .frame(width: width, height: 70)
                     
                     Text("Название:")
                         .font(.custom("semibold", size: 20))
-                        .frame(width: buttonWidth - 40, alignment: .leading)
+                        .frame(width: width - 40, alignment: .leading)
                         .foregroundColor(.customBlue)
                     
                     TextEditor(text: $newExerciseTitle)
-                        .frame(width: buttonWidth - 40, height: 130)
+                        .frame(width: width - 40, height: 130)
                         .focused($isFocused, equals: true)
                         .foregroundColor(.customBlue)
                         .cornerRadius(10)

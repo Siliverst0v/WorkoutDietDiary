@@ -17,7 +17,7 @@ struct DietDiaryView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 ForEach(days, id: \.id) { day in
                     VStack(alignment: .trailing, spacing: 0) {
                         DeleteDayButtonView(day: day)
@@ -29,15 +29,16 @@ struct DietDiaryView: View {
                                     Image("Food")
                                         .resizable()
                                         .frame(width: 50, height: 50)
-                                    Text("\(Int(day.calories)) Калорий")
+                                    Text(verbatim: "\(Int(day.calories)) Калорий")
                                         .foregroundColor(.customRed)
                                         .font(.headline)
-                                        .frame(width: 110)
+                                        .frame(width: 130)
                                     Spacer()
-                                    Text("\(dateFormat(date: day.date))")
+                                    Text("\(formatDate(date: day.date)) \(getDayName(date: day.date))")
                                         .foregroundColor(.customBlue)
                                         .font(.headline)
-                                        .frame(width: 100)
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: 120)
                                     Spacer()
                                 }
                                 NavigationLink("",
@@ -49,7 +50,7 @@ struct DietDiaryView: View {
                                 }
                             }
                             .frame(
-                                width: UIScreen.main.bounds.size.width - 40,
+                                width: width,
                                 height: 90,
                                 alignment: .center
                             )
@@ -60,7 +61,7 @@ struct DietDiaryView: View {
                     .padding(.vertical, 5)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Дневник калорий")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -78,15 +79,6 @@ struct DietDiaryView: View {
                 }
             }
         }
-    }
-}
-
-extension DietDiaryView {
-    
-    private func dateFormat(date: Date) -> String {
-        let df = DateFormatter()
-        df.dateFormat = "dd.MM.yyyy"
-        return df.string(from: date)
     }
 }
 

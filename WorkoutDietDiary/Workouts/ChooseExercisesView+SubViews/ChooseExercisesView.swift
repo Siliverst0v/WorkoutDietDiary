@@ -37,7 +37,7 @@ struct ChooseExercisesView: View {
                         RoundedRectangle(cornerRadius: 11)
                             .stroke(Color.gray, lineWidth: 0.3)
                     )
-                    .frame(width: UIScreen.main.bounds.size.width - 40)
+                    .frame(width: width)
                 }
                 Spacer()
                     Text("Группы упражнений")
@@ -49,7 +49,6 @@ struct ChooseExercisesView: View {
                                 .stroke(Color.gray, lineWidth: 0.3)
                         )
                     Spacer()
-                
                 LazyVGrid(columns: columns, spacing: 30) {
                     ExerciseGroupButtonView(
                         exercisesToDisplay: $exercisesToDisplay,

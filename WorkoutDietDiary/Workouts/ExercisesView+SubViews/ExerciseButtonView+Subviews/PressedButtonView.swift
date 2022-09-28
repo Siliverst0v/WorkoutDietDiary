@@ -26,12 +26,10 @@ struct PressedButtonView: View {
     @Binding var title: String
     @Binding var note: String
     
-    @State var buttonWidth = UIScreen.main.bounds.size.width - 40
-    
     var body: some View {
         ZStack(alignment: .top) {
             ExerciseButtonsBackgroundView(
-                width: buttonWidth,
+                width: width,
                 height: backgroundHeight + CGFloat(((sets.count - 1) * 46)))
             VStack(alignment: .center) {
                 HStack {
@@ -46,7 +44,7 @@ struct PressedButtonView: View {
                         .foregroundColor(.customBlue)
                         .lineLimit(3)
                         .frame(
-                            width: buttonWidth - 140,
+                            width: width - 140,
                             height: 60,
                             alignment: .leading)
                     Spacer()
@@ -63,7 +61,7 @@ struct PressedButtonView: View {
                     .disabled(true)
                     Spacer()
                 }
-                .frame(width: buttonWidth, height: 70, alignment: .center)
+                .frame(width: width, height: 70, alignment: .center)
                 
                 SetsView(isFocused: _isFocused,
                          sets: $sets,
@@ -77,7 +75,7 @@ struct PressedButtonView: View {
                     .focused($isFocused, equals: true)
                     .foregroundColor(.customBlue)
                     .lineLimit(2)
-                    .frame(width: UIScreen.main.bounds.size.width - 80, height: 80)
+                    .frame(width: width - 40, height: 80)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)

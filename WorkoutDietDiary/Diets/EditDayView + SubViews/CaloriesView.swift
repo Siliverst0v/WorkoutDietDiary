@@ -28,7 +28,7 @@ struct CaloriesView: View {
                     RoundedRectangle(cornerRadius: 11)
                         .stroke(Color.gray, lineWidth: 0.3)
                 )
-                .frame(width: UIScreen.main.bounds.size.width - 40)
+                .frame(width: width)
             Text("\(Int(totalCaloriesToday())) Ккал за день")
                 .foregroundColor(.customRed)
                 .font(.headline)
