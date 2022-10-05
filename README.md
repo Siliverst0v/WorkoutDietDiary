@@ -11,10 +11,10 @@ The first part of the application allows you to create a workout by selecting mu
     
     * The "memories" button on the right allows you to see the results of this exercise in past workouts,
     you do not need to remember and search.
-    
+
     * You can also leave a note on the exercise
-![image](https://user-images.githubusercontent.com/94259002/194168367-dd5038b6-2044-4526-8bae-75d4b16200fc.png)
-![ExercisesScreen](https://user-images.githubusercontent.com/94259002/176559180-ec8cc60e-a360-42b6-b37b-df15312041b1.png)
+    ![ChooseExerciseScreen](https://user-images.githubusercontent.com/94259002/194169136-dee522a9-8a23-4c88-ad91-4e1e0ef97663.png)
+![ExercisesScreen](https://user-images.githubusercontent.com/94259002/194169209-11dfb3da-31a9-4d85-b13b-49cea1b03461.png)
 
 
 When the workout is created, it will appear on the main screen.
