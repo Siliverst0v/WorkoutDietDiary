@@ -14,7 +14,7 @@ The first part of the application allows you to create a workout by selecting mu
 
     * You can also leave a note on the exercise
     
-![ChooseExerciseScreen](https://user-images.githubusercontent.com/94259002/194169136-dee522a9-8a23-4c88-ad91-4e1e0ef97663.png)
+![ChooseExerciseScreen2](https://user-images.githubusercontent.com/94259002/194171893-b12ef21f-76f2-4118-bc18-15984bc028bc.png)
 ![ExercisesScreen](https://user-images.githubusercontent.com/94259002/194169209-11dfb3da-31a9-4d85-b13b-49cea1b03461.png)
 
 
