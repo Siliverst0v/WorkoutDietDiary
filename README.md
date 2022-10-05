@@ -13,7 +13,7 @@ The first part of the application allows you to create a workout by selecting mu
     you do not need to remember and search.
     
     * You can also leave a note on the exercise
-    ![image](https://user-images.githubusercontent.com/94259002/194168367-dd5038b6-2044-4526-8bae-75d4b16200fc.png)
+![image](https://user-images.githubusercontent.com/94259002/194168367-dd5038b6-2044-4526-8bae-75d4b16200fc.png)
 ![ExercisesScreen](https://user-images.githubusercontent.com/94259002/176559180-ec8cc60e-a360-42b6-b37b-df15312041b1.png)
 
 
