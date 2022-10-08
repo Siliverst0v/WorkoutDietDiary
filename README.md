@@ -23,7 +23,7 @@ When the workout is created, it will appear on the main screen.
     * If needed, it can be removed.
     
     * When pressed, we go to the detailed view and see all the selected exercises, 
-    they can be edited and deleted.
+    they can be edited and deleted. You can also add exercises from this screen.
     
 ![WorkoutScreen](https://user-images.githubusercontent.com/94259002/194728932-714b211d-2dec-4d0c-b0f9-95c0c2af2f72.png)
 ![DetailWorkoutScreen](https://user-images.githubusercontent.com/94259002/194728935-a0c4783a-d3d7-4504-ab2f-34a288299e76.png)
@@ -31,8 +31,7 @@ When the workout is created, it will appear on the main screen.
 
 The second part of the application is a calorie diary.
 
-    * Just add a meal, fill in the name and number of calories, 
-    and the application calculates the calories for the day.
+    * Simply create a day and add all the meals with the number of calories to it. The total calories for the day will be calculated automatically.
     
 ![DaysScreen](https://user-images.githubusercontent.com/94259002/194729387-efa2bb50-6b4c-4d15-831a-97c4c6b58048.png)
 ![CaloriesScreen](https://user-images.githubusercontent.com/94259002/194729392-fa61d636-1459-4d8b-bdbe-08d04b53ed43.png)
