@@ -33,6 +33,12 @@ The second part of the application is a calorie diary.
 
     * Just add a meal, fill in the name and number of calories, 
     and the application calculates the calories for the day.
+    
+![DaysScreen](https://user-images.githubusercontent.com/94259002/194729387-efa2bb50-6b4c-4d15-831a-97c4c6b58048.png)
+![CaloriesScreen](https://user-images.githubusercontent.com/94259002/194729392-fa61d636-1459-4d8b-bdbe-08d04b53ed43.png)
+![AddFoodScreen](https://user-images.githubusercontent.com/94259002/194729396-f5201a25-80d4-460d-b49a-ed1581332827.png)
 
-![CaloriesScreen](https://user-images.githubusercontent.com/94259002/176561913-9c7744c8-01d9-4511-b668-a5c2a13b934b.png) 
-![AddFoodScreen](https://user-images.githubusercontent.com/94259002/176562004-57ac5975-9874-4b62-9881-cfb5db498568.png)
+
+
+
+
