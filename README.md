@@ -25,8 +25,8 @@ When the workout is created, it will appear on the main screen.
     * When pressed, we go to the detailed view and see all the selected exercises, 
     they can be edited and deleted.
     
-![WorkoutScreen](https://user-images.githubusercontent.com/94259002/176560989-37edd9ea-3b98-4e1e-a287-37fea8137a63.png)
-![DetailWorkoutScreen](https://user-images.githubusercontent.com/94259002/176560997-6aea296b-3894-46b6-863c-c4711eb4a8ba.png)
+![WorkoutScreen](https://user-images.githubusercontent.com/94259002/194728932-714b211d-2dec-4d0c-b0f9-95c0c2af2f72.png)
+![DetailWorkoutScreen](https://user-images.githubusercontent.com/94259002/194728935-a0c4783a-d3d7-4504-ab2f-34a288299e76.png)
 
 
 The second part of the application is a calorie diary.
