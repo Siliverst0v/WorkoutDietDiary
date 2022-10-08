@@ -36,9 +36,4 @@ The second part of the application is a calorie diary.
     
 ![DaysScreen](https://user-images.githubusercontent.com/94259002/194729387-efa2bb50-6b4c-4d15-831a-97c4c6b58048.png)
 ![CaloriesScreen](https://user-images.githubusercontent.com/94259002/194729392-fa61d636-1459-4d8b-bdbe-08d04b53ed43.png)
-![AddFoodScreen](https://user-images.githubusercontent.com/94259002/194729396-f5201a25-80d4-460d-b49a-ed1581332827.png)
-
-
-
-
 
